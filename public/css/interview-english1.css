@@ -1,0 +1,81 @@
+.upper-header-IE1 {
+
+    background-color: rgb(222, 227, 226, 0.7);
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: black;
+
+}
+
+.top-line-IE1 {
+
+    border: 3px solid rgba(17, 105, 121, 1);
+    width: 100%;
+
+}
+
+.lower-header-IE1 {
+
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+
+}
+
+.border-top-IE1 {
+    position: relative;
+    left: 0px;
+    width: 230px;
+    height: 40px;
+    background: #116979;
+    padding-left: 10px;
+    
+    border-radius: 0px 70px 70px 0px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+
+}
+
+.border-middle-IE1 {
+    position: relative;
+    left: 0px;
+    width: 230px;
+    height: 40px;
+    background: #116979;
+    padding-left: 10px;
+    
+    border-radius: 0px 70px 70px 0px;
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 0px;
+    width: 150px;
+}
+
+.border-bottom-IE1 {
+    position: relative;
+    left: 0px;
+    width: 230px;
+    height: 40px;
+    background: #116979;
+    padding-left: 10px;
+    
+    border-radius: 0px 70px 70px 0px;
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    width: 180px;
+}

@@ -1,0 +1,37 @@
+.upper-header-DT2 {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+
+.lower-header-DT2 {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #009CD0;
+}
+
+.left-border-DT2 {
+    position: relative;
+    background: #1EBEA5;
+    line-height: 20px;
+    border-radius: 70px 70px 70px 0px;
+    margin-left: 16px;
+    margin-right: -18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.right-border-DT2 {
+    position: relative;
+    background: #1EBEA5;
+    line-height: 20px;
+    border-radius: 70px 0px 70px 70px;
+    margin-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 260px;
+    text-align: center;
+}

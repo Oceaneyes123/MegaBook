@@ -1,0 +1,188 @@
+<template>
+
+<div :style = "{fontSize: fontSize + 'px'}">
+
+<v-container fluid ma-0 pa-0>
+
+  <v-layout column>
+    <v-img
+           src="https://image.freepik.com/free-photo/couple-is-drinking-white-wine-romantic-dinner-restaurant-holding-hands_8353-10578.jpg">
+
+        <v-layout
+        align-end
+        fill-height
+        pa-2
+        black--text
+      >
+     <h1 class="upper-header-SPR4">난 ~가 걱정돼
+  </h1>
+      </v-layout>
+    </v-img>
+
+
+          <h2 class="lower-header-SPR4">Today's topic</h2>
+
+  <hr width="60%">
+               <div style="padding : 10px; line-height: 200%;">
+
+                 <h2>Pattern 77 | </h2>
+                  <br />
+                  <h3>I’m worried about….</h3>
+                    <br />
+                    <p>
+                    현재 걱정되는 것은 I’m worried about…,  과거에 걱정했던 것은 I was worried about…을 써서 말한다. 자주 하는 말인 “네 걱정 많이 했다.”고 하려면 I was worried about you. 라고 하면 된다.
+                    </p>
+                    <br />
+
+<h2 class = "border-SPR4">Dialogue
+</h2>
+
+<div style="padding-top : 10px; padding-bottom : 2px;">
+
+          <br />
+          <p style="line-height: 2;">
+            A : When are you going to start dating again?<br />
+            B : I’m not in any hurry.<br />
+            A : Why not? It could be fun.<br />
+            B : <b>난 상처받는 게 걱정돼.</b>
+          </p>
+          <p style="line-height: 2;">
+            A : 언제 다시 데이트를 시작할 거야?<br />
+            B : 급하지 않아.<br />
+            A : 왜? 재미있을텐데<br />
+            B : <mark style="background-color: #a7d7c5; color: #d9e7cd;">I’m worried about getting hurt.</mark>
+          </p>
+          <br />
+
+
+</div>
+
+<h2  class = "border-SPR4">Pattern Practice
+</h2>
+
+<div style="padding-top : 10px; padding-bottom : 0px;">
+
+        <br />
+
+        <p>
+          &rarr; 우리말을 보고 순식간에 영어로 말할 수 있을 때까지 반복하세요!
+        </p>
+        <br />
+
+        <p>
+          <b>609</b> 난 직장을 잃을까봐 걱정돼. ( lose, my job ) <br />
+        </p>
+        <p>
+          <b>610</b> 난 상처받는 게 걱정돼. ( get hurt ) <br />
+        </p>
+        <p>
+          <b>611</b> 난 내 성적이 걱정돼. ( grade ) <br />
+        </p>
+        <p>
+          <b>612</b> 난 환경이 걱정돼. ( environment ) <br />
+        </p>
+        <p>
+          <b>613</b> 난 면접이 걱정돼. ( job interview ) <br />
+        </p>
+        <p>
+          <b>614</b>  <br />
+        </p>
+        <p>
+          <b>615</b>  <br />
+        </p>
+        <p>
+          <b>616</b>  <br />
+        </p>
+        <v-container grid-list-md text-xs-left>
+      <v-layout row wrap>
+
+
+          <v-flex xs12>
+          <v-card light color="#a7d7c5">
+            <v-card-text class="px-10" style="color:#d9e7cd;">
+              609 I’m worried about losing my job.<br />
+              610 I’m worried about getting hurt.<br />
+              611 I’m worried about my grade.<br />
+              612 I’m worried about the environment.<br />
+              613 I’m worried about my job interview.<br />
+              614 I’m worried about you.<br />
+              615 I’m worried about the future.<br />
+              616 I’m worried about her reaction when she finds out.<br />
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+  </v-container>
+    
+</div>
+
+</div>
+
+
+       </v-layout>
+     </v-container>
+</div>
+
+
+
+</template>
+
+
+
+<script>
+export default {
+
+  props: ['fontSize'],
+
+  data(){
+
+    return{
+
+
+    }
+
+  },
+
+
+  beforeMount(){
+
+
+  },
+
+  methods:{
+
+
+  },
+
+  watch:{
+
+    fontSize(current, old){
+
+      console.log(current, 'current')
+      console.log(old, 'previous')
+
+
+    }
+  }
+}
+</script>
+
+<style lang="css">
+
+p{
+
+  margin-top: 10px;
+}
+
+h3{
+  padding-top: 7px;
+
+}
+
+
+body{
+
+  font-size: 16px;
+}
+
+</style>

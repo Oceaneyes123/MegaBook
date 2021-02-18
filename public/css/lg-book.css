@@ -1,0 +1,111 @@
+.line-top-lg {
+    border-color: #2F4674;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.line-lg {
+    margin-left: -18px;
+    margin-right: -18px;
+    margin-top: 10px;
+    border-color: #2F4674;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.upper-header-lg {
+    background-color: rgb(139, 84, 63, 0.7);
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.lower-header-lg {
+    position: relative;
+    left: 0px;
+    width: 255px;
+    height: 40px;
+    background: #2F4674;
+    padding-left: 10px;
+    border-radius: 0px 0px 70px 0px;
+    padding-top: 7px;
+    margin-right: -18px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 0px;
+}
+
+.border-lg {
+    position: relative;
+    left: 0px;
+    width: 255px;
+    height: 40px;
+    background: #2F4674;
+    padding-left: 10px;
+    border-radius: 0px 0px 70px 0px;
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 0px;
+
+}
+
+.border-translate-lg {
+    position: relative;
+    left: 0px;
+    width: 255px;
+    height: 40px;
+    background: #2F4674;
+    padding-left: 10px;
+    border-radius: 0px 0px 70px 0px;
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin-top: 0px;
+    width: 100px;
+}
+
+.second-dialog-lg {
+    color: #1565C0;
+}
+
+.replace {
+    counter-reset: list;
+}
+
+.replace>li {
+    list-style: none;
+    position: relative;
+}
+
+.replace>li:before {
+    content: counter(list, upper-alpha) ":";
+    counter-increment: list;
+    position: absolute;
+    left: -1.4em;
+}
+
+.slide-fade-enter-active {
+    transition: all 3s ease;
+}
+
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+
+/* .slide-fade-leave-active below version 2.1.8 */
+    {
+    transform: translateX(10px);
+    opacity: 0;
+}

@@ -1,0 +1,31 @@
+.upper-header-PRT1 {
+
+    background-color: rgba(13, 13, 13, 0.7);
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.lower-header-PRT1 {
+
+    background-color: #a7d7c5;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.border-PRT1 {
+
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    background-color: #a7d7c5;
+
+}

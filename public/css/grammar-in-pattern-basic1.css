@@ -1,0 +1,34 @@
+.upper-header-GPB1 {
+
+    margin: 0 -30px 10px;
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 25px;
+    background-color: rgba(2, 21, 70, 0.64);
+    border: 0px solid #afcde3;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.lower-header-GPB1 {
+
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+
+}
+
+.border-GPB1 {
+
+    
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 0px;
+    background-color: #9692af;
+    border: 0px solid #afcde3;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}

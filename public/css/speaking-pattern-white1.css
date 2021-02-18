@@ -1,0 +1,33 @@
+.upper-header-SPW1 {
+
+    margin: 0 -30px 10px;
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 25px;
+    background-color: rgba(255, 231, 255, 0.64);
+    border: 0px solid #9B4F95;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}
+
+.lower-header-SPW1 {
+
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.border-SPW1 {
+
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 15px;
+    background-color: #CB6ECB;
+    border: 0px solid #afcde3;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}

@@ -1,0 +1,34 @@
+.upper-header-GPI1 {
+
+    margin: 0 -30px 10px;
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 25px;
+    background-color: rgba(209, 90, 124, 0.80);
+    border: 0px solid #afcde3;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}
+
+.lower-header-GPI1 {
+
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+
+}
+
+.border-GPI1 {
+
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 0px;
+    background-color: #ee8972;
+    border: 0px solid #afcde3;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+
+}

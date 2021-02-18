@@ -1,0 +1,5773 @@
+<template>
+  <v-app>
+    <div v-if="$route.name === 'freetalking_beginner'">
+      <v-layout>
+        <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#5C8D89; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+          <v-list class="pa-1">
+            <v-list-tile avatar>
+              <v-list-tile-avatar>
+                <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+              </v-list-tile-avatar>
+              <v-list-tile-content>
+                <v-list-tile-title>Perfect Reading &amp; Talking</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+          <v-divider></v-divider>
+          <v-list>
+            <template v-slot:activator>
+              <v-list-tile>
+                <v-list-tile-action>
+                  <v-icon>book</v-icon>
+                </v-list-tile-action>
+                <v-list-tile-title>Table of Contents</v-list-tile-title>
+              </v-list-tile>
+            </template>
+            <v-list class="custom-list">
+              <v-list-tile>
+                <h2>Table of Contents</h2>
+              </v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 1 Getting to Know</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter1Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter1Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter1Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 2 Travelling</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter2Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter2Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter2Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 3 Colors</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter3Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter3Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter3Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 4 Memories</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter4Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter4Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter4Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 5 Music</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter5Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter5Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter5Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 6 Food</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter6Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter6Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter6Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 7 Family Members</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter7Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter7Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter7Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 8 Friendship</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter8Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter8Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter8Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 9 The Weather</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter9Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter9Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter9Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 10 Favorite Things</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter10Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter10Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter10Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 11 Right Now</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter11Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter11Unit2')">- Unit 2</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 12 Past Happenings</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter12Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter12Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter12Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 13 The Future</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter13Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter13Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter13Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 14 Nature</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter14Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter14Unit2')">- Unit 2</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 15 The Fauna</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter15Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter15Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter15Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 16 The Flora</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter16Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter16Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter16Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 17 Time</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter17Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter17Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter17Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 18 Movies</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter18Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter18Unit2')">- Unit 2</v-list-tile>   
+              <p>
+                <v-list-tile class = "ch" >Ch. 19 Pets</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter19Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter19Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter19Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 20 Inspiring People</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter20Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter20Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter20Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 21 Superheroes</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter21Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter21Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter21Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 22 Time Travel</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter22Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter22Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter22Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 23 Hobbies</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter23Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter23Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter23Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 24 Personal Habits</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter24Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter24Unit2')">- Unit 2</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 25 Nations of the World</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter25Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter25Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter25Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 26 Business</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter26Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter26Unit2')">- Unit 2</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 27 Jobs and Occupation</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter27Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter27Unit2')">- Unit 2</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 28 Relaxation</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter28Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter28Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter28Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 29 Rights and Duties</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter29Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter29Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter29Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 30 Laws</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter30Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter30Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter30Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 31 Making Acquaintances and Friends</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter31Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter31Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter31Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 32 Culture</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter32Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter32Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter32Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 33 Neighborhood</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter33Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter33Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter33Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 34 My City</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter34Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter34Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter34Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 35 Superstition</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter35Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter35Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter35Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 36 Learning Foreign Languages</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter36Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter36Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter36Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 37 Fashion</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter37Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter37Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter37Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 38 Dreams</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter38Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter38Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter38Unit3')">- Unit 3</v-list-tile>
+              <p>
+                <v-list-tile class = "ch" >Ch. 39 Science and Technology</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter39Unit1')">- Unit 1</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter39Unit2')">- Unit 2</v-list-tile>
+                <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter39Unit3')">- Unit 3</v-list-tile>
+              </p>
+              <v-list-tile class = "ch" >Ch. 40 Holidays</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter40Unit1')">- Unit 1</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter40Unit2')">- Unit 2</v-list-tile>
+              <v-list-tile class = "unit" @click="$router.push('/freetalking/beginner/Chapter40Unit3')">- Unit 3</v-list-tile>
+            </v-list>
+          </v-list>
+        </v-navigation-drawer>
+        <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #5C8D89;">
+          <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+          <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Perfect Reading &amp; Talking</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <template v-if="speechSlot" #extension>
+           <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+                  <v-col cols="4">
+                    <v-menu offset-y>
+                      <!-- <template v-slot:activator="{ on }">
+                        <v-btn v-on="on" depressed block text color="#5C8D89">{{speechRateText}}</v-btn>
+                      </template> -->
+                      <v-list>
+                        <v-list-item>
+                          <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                        </v-list-item>
+                        <v-divider></v-divider>
+                        <v-list-item>
+                          <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                        </v-list-item>
+                        <v-divider></v-divider>
+                        <v-list-item>
+                          <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                        </v-list-item>
+                      </v-list>
+                    </v-menu>
+                  </v-col>
+                </v-toolbar-items>
+              </v-row>
+            </v-container>
+          </template>
+          <!--  <v-menu v-model="speechInfo" offset-y offset-x>
+          <template v-slot:activator="{ on }"> -->
+          <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+          <!--  </template>
+          <v-card width="50" height="50">
+          hi
+        </v-card>
+      </v-menu>  -->
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'freetalking_intermediate'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#c38b8b; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Step 2</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/freetalking/intermediate/chapter' + n)" v-for="n in 20" :key="n">Chapter {{n}}</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #c38b8b;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Step 2</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'grammar_pattern_basic'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#9692af; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Grammar in Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 1)">[Unit 1] Nouns (1) 명사</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 2)">[Unit 2] Nouns (2) 명사</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 3)">[Unit 3] Much or Many</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 4)">[Unit 4] Wh questions</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 5)">[Unit 5] In, At and On</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 6)">[Unit 6] This and That</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 7)">[Unit 7] Used to</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 8)">[Unit 8] Do you often…?</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 9)">[Unit 9] How long does it take to…?</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 10)">[Unit 10] Since and For</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 11)">[Unit 11] What do you know about…?</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 12)">[Unit 12] I am going to...</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 13)">[Unit 13] If I were… I would… </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 14)">[Unit 14] Must and Should</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 15)">[Unit 15] I would always… </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 16)">[Unit 16] I would rather… </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 17)">[Unit 17] What Does It Mean?</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 18)">[Unit 18] Have decided to</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 19)">[Unit 19] Unless</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-basic/chapter' + 20)">[Unit 20] Do you think… ?</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #9692af;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Grammar in Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+       <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'patterncourse_adultadv'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#9692af; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Pattern Course Adult Advance Step 1</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/adultadv/chapter' + n)" v-for="n in 20" :key="n">Chapter {{n}}</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #9692af;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Pattern Course Adult Advance Step 1</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'grammar_pattern_intermediate'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#ee8972; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Grammar in Pattern Intermediate</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 1)">[Unit 1] Just My Imagination
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 2)">[Unit 2] Possibilities and the General Truth</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 3)">[Unit 3] What Did She Tell You?
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 4)">[Unit 4] Just Get it Right
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 5)">[Unit 5] Looking Back to the Past
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 6)">[Unit 6] Which is Which?</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 7)">[Unit 7] Choosing the Best</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 8)">[Unit 8] Daily Routine</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 9)">[Unit 9] Everything, Nothing</v-list-tile>
+          <v-list-tile @click="$router.push('/pattern-course/grammar-in-pattern-intermediate/chapter' + 10)">[Unit 10] Everything, Nothing</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #ee8972;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Grammar in Pattern Intermediate</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Business_Step1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #7690CF; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Business - Step 1</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 1)">[Unit 1] Meeting People</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 2)">[Unit 2] Saying where you’re from</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 3)">[Unit 3] Meeting People</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 4)">[Unit 4] Telephone numbers and email addresses</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 5)">[Unit 5] Asking about timetables</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 6)">[Unit 6] Buying food</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 7)">[Unit 7] Talking about your job</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 8)">[Unit 8] Describing a company</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 9)">[Unit 9] Talking about daily routines</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 10)">[Unit 10] Coping with difficult language</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 11)">[Unit 11] Coping with Difficult Language</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 12)">[Unit 12] Using the Internet</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 13)">[Unit 13] Asking About Business Facilities</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 14)">[Unit 14] Asking For and Giving Directions.</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 15)">[Unit 15] Talking About Your Home</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 16)">[Unit 16] Talking About Life at Work</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 17)">[Unit 17] Saying What You’re Doing at the Moment</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 18)">[Unit 18] Saying What You Do in Your Spare Time</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 19)">[Unit 19] Arranging To Meet</v-list-tile></p>
+       <p><v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep1/chapter' + 20)">[Unit 20] Discussing Future Arrangements</v-list-tile></p>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #7690CF;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Business - Step 1</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+             
+
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Business_Step2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #ffe75e; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Business - Step 2</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 1)">[Unit 1] Buying train tickets</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 2)">[Unit 2] Talking about past events</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 3)">[Unit 3] Giving an update</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 4)">[Unit 4] Talking about holidays</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 5)">[Unit 5] Exchanging information by email</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 6)">[Unit 6] Making telephone calls</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 7)">[Unit 7] Talking about the weather and climate 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 8)">[Unit 8] Talking about the weather and climate 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 9)">[Unit 9] Making comparisons</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 10)">[Unit 10] Making choices</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 11)">[Unit 11] Checking in for a flight</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 12)">[Unit 12] Making plans 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 13)">[Unit 13] Making plans 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 14)">[Unit 14] Describing plans 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 15)">[Unit 15] Describing plans 2 </v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 16)">[Unit 16] Staying at a hotel</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 17)">[Unit 17] Discussing how business is going</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 18)">[Unit 18] Discussing sales and orders</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 19)">[Unit 19] Shopping 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep2/chapter' + 20)">[Unit 20] Shopping 2</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #ffe75e;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Business - Step 2</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Business_Step3'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #BF826B; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Business - Step 3</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 1)">[Unit 1] Talking about your job</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 2)">[Unit 2] Talking about products and services</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 3)">[Unit 3] Eating out</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 4)">[Unit 4] Discussing work in progress</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 5)">[Unit 5] Discussing strengths and weaknesses</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 6)">[Unit 6] Talking about your interests</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 7)">[Unit 7] Comparing offers</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 8)">[Unit 8] Discussing strengths and weaknesses 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 9)">[Unit 9] Describing places</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 10)">[Unit 10] Discussing past performance</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 11)">[Unit 11] Discussing past projects</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 12)">[Unit 12] Talking about weekend</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 13)">[Unit 13] Making arrangements</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 14)">[Unit 14] Confirming arrangements</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 15)">[Unit 15] Sightseeing</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 16)">[Unit 16] Forecasting</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 17)">[Unit 17] Discussing aims</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 18)">[Unit 18] Confirming arrangements</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 19)">[Unit 19] Talking about your education and career</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep3/chapter' + 20)">[Unit 20] Giving an update</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #BF826B;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Business - Step 3</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Business_Step4'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #2AB0BF; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Business - Step 4</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 1)">[Unit 1] Discussing interesting experience</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 2)">[Unit 2] Understanding business news</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 3)">[Unit 3] Talking about the economy</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 4)">[Unit 4] Discussing what’s on TV 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 5)">[Unit 5] Discussing what’s on TV 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 6)">[Unit 6] Describing a business concept 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 7)">[Unit 7] Describing a business concept 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 8)">[Unit 8] Discussing strategies</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 9)">[Unit 9] Using the Internet</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 10)">[Unit 10] Discussing ideas</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 11)">[Unit 11] Making decisions 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 12)">[Unit 12] Making decisions 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 13)">[Unit 13] Dealing with problems</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 14)">[Unit 14] Describing how things work</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 15)">[Unit 15] Discussing safety procedures</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 16)">[Unit 16] Using tourist facilities</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 17)">[Unit 17] Attending meetings</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 18)">[Unit 18] Passing on information 1</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 19)">[Unit 19] Passing on information 2</v-list-tile>
+          <v-list-tile @click="$router.push('/PrototypeBusiness/BusinessStep4/chapter' + 20)">[Unit 20] Welcoming visitors</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #2AB0BF;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Business - Step 4</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#9692af">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider> <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Dialogue_Books1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #84a9ac; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Daily Dialogues</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 1)">[Unit 1] Hi! What's your name?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 2)">[Unit 2] How do you spell that?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 3)">[Unit 3] What's Seoul like?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 4)">[Unit 4] Are you French?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 5)">[Unit 5] Hi, I’m your new neighbor!</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 6)">[Unit 6] Hello, this is an emergency!</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 7)">[Unit 7] How much is this?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 8)">[Unit 8] At a dentist</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 9)">[Unit 9] Why aren't you working?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 10)">[Unit 10] Busy street</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 11)">[Unit 11] Are you enjoying yourself?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 12)">[Unit 12] She has a beautiful smile
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 13)">[Unit 13] Do you have time now?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 14)">[Unit 14] I have a new girlfriend
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 15)">[Unit 15] My father is an engineer</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 16)">[Unit 16] Does he have a good job?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 17)">[Unit 17] Whose house is that?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 18)">[Unit 18] IThere's a dog
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 19)">[Unit 19] There are some people</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 20)">[Unit 20] How many?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 21)">[Unit 21] What kind of bus is it?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 22)">[Unit 22] Do we have any food?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 23)">[Unit 23] Buying Groceries</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 24)">[Unit 24] Do you like rap?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 25)">[Unit 25] Preferences</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 26)">[Unit 26] I'm going out tonight</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 27)">[Unit 27] What do you want?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel1/chapter' + 28)">[Unit 28] She wants a new car</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #84a9ac;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Daily Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Dialogue_Books2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#84a9ac; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Dialogue Books</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 1)">[Unit 1] Help yourself</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 2)">[Unit 2] Our apartment</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 3)">[Unit 3] Apartment</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 4)">[Unit 4] Scene from a movie</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 5)">[Unit 5] Internet Dating</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 6)">[Unit 6] Where do you work?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 7)">[Unit 7] What does she do?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 8)">[Unit 8] What's my job?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 9)">[Unit 9] An interview</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 10)">[Unit 10] Karaoke</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 11)">[Unit 11] Workout</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 12)">[Unit 12] What's your day like?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 13)">[Unit 13] A questionnaire</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 14)">[Unit 14] My boyfriend can do everything!</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 15)">[Unit 15] Lucky husband</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 16)">[Unit 16] Can you play the guitar?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 17)">[Unit 17] Can you help me?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 18)">[Unit 18] On a date</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 19)">[Unit 19] American Restaurant</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 20)">[Unit 20] Whose dog is this?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 21)">[Unit 21] Which one?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 22)">[Unit 22] What do I have to do?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 23)">[Unit 23] Miami Police Department</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 24)">[Unit 24] How can I help you??</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 25)">[Unit 25] Lost in Niagara Falls</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 26)">[Unit 26] Personal information</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 27)">[Unit 27] Vacations</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevel2/unit' + 28)">[Unit 28] Where were you?</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #84a9ac;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Daily Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Dialogue_Books3'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#84a9ac; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Dialogue Books</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 1)">[Unit 1] Return from space</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 2)">[Unit 2] In the office</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 3)">[Unit 3] In the office</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 4)">[Unit 4] Talking about the past</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 5)">[Unit 5] In prison</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 6)">[Unit 6] Going to movies</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 7)">[Unit 7] Musical</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 8)">[Unit 8] Secretary</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 9)">[Unit 9] Dinner with a star</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 10)">[Unit 10] Going out for dinner</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 11)">[Unit 11] What are you doing tonight?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 12)">[Unit 12] Leisure Time</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 13)">[Unit 13] Health problems</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 14)">[Unit 14] At the drugstore</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 15)">[Unit 15] You're not much help</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 16)">[Unit 16] How many siblings do you have?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 17)">[Unit 17] I need a loan</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 18)">[Unit 18] That's my business</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 19)">[Unit 19] When is your birthday?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 20)">[Unit 20] City and country</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 21)">[Unit 21] Buying a book</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 22)">[Unit 22] The life of Bob Moore – Looking for new apartment</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 23)">[Unit 23] The life of Bob Moore – Nice view</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 24)">[Unit 24] The Life of Bob Moore – Lucky day</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 26)">[Unit 25] Waiting for a friend</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 27)">[Unit 26] Monday morning</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelGreen3/unit' + 28)">[Unit 27] Good luck, Waldo</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #84a9ac;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Daily Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+        
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Dialogue_Books4'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#84a9ac; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Dialogue Books</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 1)">[Unit 1] I'll do it</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 2)">[Unit 2] Heavy suitcase</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 3)">[Unit 3] I had to wash my hair…</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 4)">[Unit 4] Wrong number</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 5)">[Unit 5] Look, feel, taste, sound, smell</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 6)">[Unit 6] Superstar</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 7)">[Unit 7] Asking for favor</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 8)">[Unit 8] I'd like to visit Europe</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 9)">[Unit 9] An interrogation</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 10)">[Unit 10] At a doctor</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 11)">[Unit 11] You should take some medicine</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 12)">[Unit 12] What's the problem?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 13)">[Unit 13] How long ago?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 14)">[Unit 14] Investigation</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 15)">[Unit 15] Nobody knows everything</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 16)">[Unit 16] Invention</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 17)">[Unit 17] Man of the Year</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 18)">[Unit 18] Moving out</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 19)">[Unit 19] I hate my job</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 20)">[Unit 20] Pictures from the past</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 21)">[Unit 21] On the moon</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 22)">[Unit 22] Where's it gone?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 23)">[Unit 23] What have you done?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 24)">[Unit 24] Elmer calls home</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 26)">[Unit 25] Have you ever…?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 27)">[Unit 26] It's Fantastic!</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelRed4/unit' + 28)">[Unit 27] You’re late!</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #84a9ac;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Daily Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+        
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Dialogue_Books5'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#84a9ac; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Dialogue Books</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 1)">[Unit 1] Trip to New Orleans</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 2)">[Unit 2] An electronic world?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 3)">[Unit 3] Looking for a job</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 4)">[Unit 4] Job interview</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 5)">[Unit 5] Times change</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 6)">[Unit 6] The trivia game</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 7)">[Unit 7] CN Tower</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 8)">[Unit 8] A new job</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 9)">[Unit 9] Opinions</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 10)">[Unit 10] Big fan</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 11)">[Unit 11] Big chance</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 12)">[Unit 12] What if it rains?</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 13)">[Unit 13] General Hospital</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 14)">[Unit 14] General Hospital II</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 15)">[Unit 15] Guess what I’m thinking of</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 16)">[Unit 16] Role in a movie</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 17)">[Unit 17] UFO</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 18)">[Unit 18] UFO - part 2</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 19)">[Unit 19] Reservations</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 20)">[Unit 20] On the road</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 21)">[Unit 21] Recovery</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 22)">[Unit 22] Changes</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 23)">[Unit 23] Football Game</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 24)">[Unit 24] Talking about the weather</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 25)">[Unit 25] Judy at the hospital</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 26)">[Unit 26] Date</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 27)">[Unit 27] Joining the army</v-list-tile>
+          <v-list-tile @click="$router.push('/DialogueBooks/DialogueLevelBlack5/unit' + 28)">[Unit 28] Army recruiting office</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #84a9ac;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Daily Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+        
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<div v-if="$route.name === 'FreeTalking_STEP1'">
+  
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#D9D9D6; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Q&amp;A</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+            
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 1)">[Unit 1] Family</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 2)">[Unit 2] Success and Happiness</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 3)">[Unit 3] Pets</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 4)">[Unit 4] Job Interviews</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 5)">[Unit 5] Generation Gap</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 6)">[Unit 6] Holidays</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 7)">[Unit 7] Gender Roles</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 8)">[Unit 8] Television</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 9)">[Unit 9] Diet and Exercise</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 10)">[Unit 10] The Best of Everything</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 11)">[Unit 11] Culture shock</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 12)">[Unit 12] Cars</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 13)">[Unit 13] Communication</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 14)">[Unit 14] Superstitions</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 15)">[Unit 15] Emergency</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 16)">[Unit 16] Conscience</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 17)">[Unit 17] Stress</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 18)">[Unit 18] Sleep</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 19)">[Unit 19] Stock Market</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP1/chapter' + 20)">[Unit 20] Smoking</v-list-tile>
+        </v-list>
+
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #D9D9D6;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Q&amp;A</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+                                                   
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>             
+            </v-toolbar-items>
+          </v-row>
+        </v-container>          
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+
+</div>
+
+<div v-if="$route.name === 'FreeTalking_STEP2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#FFFF9C; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Q&amp;A</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 1)">[Unit 1] Growing Old</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 2)">[Unit 2] Progress</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 3)">[Unit 3] Moving Children Out</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 4)">[Unit 4] Advice</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 5)">[Unit 5] Ghosts and the Supernatural</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 6)">[Unit 6] Disasters</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 7)">[Unit 7] Internet Shopping</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 8)">[Unit 8] War and the Military</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 9)">[Unit 9] Studying Abroad</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 10)">[Unit 10] Optimism&amp;Pessimism</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 11)">[Unit 11] Love</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 12)">[Unit 12] Stealing</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 13)">[Unit 13] Pollution and Recycling</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 14)">[Unit 14] Money Management</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 15)">[Unit 15] Divorce</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 16)">[Unit 16] Cheating</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 17)">[Unit 17] Calling in Sick</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 18)">[Unit 18] Retirement</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 19)">[Unit 19] Vacation</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP2/chapter' + 20)">[Unit 20] Forms of Government</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #FFFF9C;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Q&amp;A</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+             <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+      
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'FreeTalking_STEP3'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#95FF9A; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Q&amp;A</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 1)">[Unit 1] Favorite Things</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 2)">[Unit 2] Transportation Systems</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 3)">[Unit 3] Proverbs</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 4)">[Unit 4] Modern Life</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 5)">[Unit 5] Hobbies</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 6)">[Unit 6] Disease</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 7)">[Unit 7] Gossip</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 8)">[Unit 8] The Homeless and Welfare</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 9)">[Unit 9] Gambling</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 10)">[Unit 10] Government Spending</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 11)">[Unit 11] Justice Systems</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 12)">[Unit 12] Prejudice and Discrimination</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 13)">[Unit 13] Drugs and Medicine</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 14)">[Unit 14] Fashion</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 15)">[Unit 15] What would you Do If...</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 16)">[Unit 16] Employment Issues</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 17)">[Unit 17] Movies</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 18)">[Unit 18] Excuses and Lies</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 19)">[Unit 19] Professionalism</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP3/chapter' + 20)">[Unit 20] Success</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #95FF9A;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Q&amp;A</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'FreeTalking_STEP4'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#FF6E6E; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Q&amp;A</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 1)">[Unit 1] Life style</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 2)">[Unit 2] Meals</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 3)">[Unit 3] Special Days</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 4)">[Unit 4] Friends</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 5)">[Unit 5] Jobs</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 6)">[Unit 6] Men&amp;Women</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 7)">[Unit 7] Health</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 8)">[Unit 8] Money</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 9)">[Unit 9] Parents &amp; Children</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 10)">[Unit 10] TV&amp;Movies</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 11)">[Unit 11] Books, Newspapers&amp;Magazines</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 12)">[Unit 12] Sports</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 13)">[Unit 13] Education</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 14)">[Unit 14] Computer&amp;Internet</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 15)">[Unit 15] Insurance</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 16)">[Unit 16] Love</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 17)">[Unit 17] Studying English</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 18)">[Unit 18] Suicide</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 19)">[Unit 19] Lottery</v-list-tile>
+          <v-list-tile @click="$router.push('/FreeTalking-QnA/FreeTalking-STEP4/chapter' + 20)">[Unit 20] Science&amp;Religion</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #FF6E6E;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Q&amp;A</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'SpeakingPattern_White1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#C68FC4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 1)">[Unit 1] 내 생각에는 ~인 것 같아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 2)">[Unit 2] ~는 아닌 것 같아.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 3)">[Unit 3] ~를 생각 중이야</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 4)">[Unit 4] ~를 생각하고 있었어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 5)">[Unit 5] ~를 계속 생각해왔어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 6)">[Unit 6] ~라고 생각해?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 7)">[Unit 7] ~인 것 같지 않아?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 8)">[Unit 8] ~에 대해 어떻게 생각해?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 9)">[Unit 9] ~에 대해 어떻게 생각해?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 10)">[Unit 10] ~는 어때?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 11)">[Unit 11] ~를 알아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 12)">[Unit 12] 전부터 ~를 알고 있었어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 13)">[Unit 13] ~인지 아닌지 모르겠어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 14)">[Unit 14] 뭘 ~할지 모르겠어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 15)">[Unit 15] ~에 대해서는 전혀 몰라.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 16)">[Unit 16] ~를 아니?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 17)">[Unit 17] ~가 뭔지 아니?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 18)">[Unit 18] 왜 ~하는지 알아?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 19)">[Unit 19] 언제 ~하는지 알아?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternWhite1/chapter' + 20)">[Unit 20] ~인지 아닌지 아니?</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #C68FC4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'SpeakingPattern_Yellow2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#C68FC4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 1)">[Unit 21] ~가 있어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 2)">[Unit 22] ~가 무척 많아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 3)">[Unit 23] ~가 있었어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 4)">[Unit 24] ~가 있을 거야</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 5)">[Unit 25] 분명 ~가 있을 거야.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 6)">[Unit 26] ~가 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 7)">[Unit 27] ~한 건 아무것도 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 8)">[Unit 28] ~하는 사람은 아무도 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 9)">[Unit 29] ~할 시간이 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 10)">[Unit 30] ~할 필요 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 11)">[Unit 31] ~가 있어?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 12)">[Unit 32] ~가 좀 있니?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 13)">[Unit 33] ~한 게 있나요?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 14)">[Unit 34] ~하는 사람 있어?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 15)">[Unit 35] ~가 많나요?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 16)">[Unit 36] ~할 방법이 없을까요?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 17)">[Unit 37] ~하는 건 불가능해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 18)">[Unit 38] 내가 ~하는 건 불가능해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 19)">[Unit 39] 더~하는 방법이 있어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternYellow2/chapter' + 20)">[Unit 40] ~하려면 어떤 방법이 가장 좋을까요?</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #C68FC4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'SpeakingPattern_Green3'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#C68FC4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 1)">[Unit 41] ~하고 싶어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 2)">[Unit 42] 난 단지 ~하고 싶었어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 3)">[Unit 43] ~하고 싶지 않아.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 4)">[Unit 44] ~하고 싶어요</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 5)">[Unit 45] 난 정말 ~하고 싶어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 6)">[Unit 46] ~할래?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 7)">[Unit 47] ~하지 않을래</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 8)">[Unit 48] 뭘~하고 싶어?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 9)">[Unit 49] 왜 ~하고 싶니</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 10)">[Unit 50] 언제 ~하고 싶어?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 11)">[Unit 51] ~어때?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 12)">[Unit 52] ~어때?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 13)">[Unit 53] ~하자</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 14)">[Unit 54] ~하지 말자</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 15)">[Unit 55] ~하는 게 좋겠어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 16)">[Unit 56] ~하지 그래?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 17)">[Unit 57] 우리 ~하는 게 어때요?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 18)">[Unit 58] 우리 ~해야 할지도 모르겠어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 19)">[Unit 59] 우리 우리 ~하자</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternGreen3/chapter' + 20)">[Unit 60] 제가 제가 ~를 제안해도 될까요?</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #C68FC4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'SpeakingPattern_Red4'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#C68FC4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 1)">[Unit 61] 난 좀 ~해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 2)">[Unit 62] 난 정말~해.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 3)">[Unit 63] 난 완전히 ~해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 4)">[Unit 64] 그건 좀 ~해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 5)">[Unit 65] 이건 완전히 ~야</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 6)">[Unit 66] ~에 만족해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 7)">[Unit 67] ~해서 정말 기뻐</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 8)">[Unit 68] ~해서 좋아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 9)">[Unit 69] 기꺼이 ~할게</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 10)">[Unit 70] ~할 용의가 있어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 11)">[Unit 71] 놀람 표현하기</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 12)">[Unit 72] ~를 믿을 수가 없어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 13)">[Unit 73] 넌 ~를 못 믿을 거야</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 14)">[Unit 74] ~하다니 충격적이었어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 15)">[Unit 75] ~하는 건 당연해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 16)">[Unit 76] 난 ~가 무서워</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 17)">[Unit 77] 난 ~가 걱정돼</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 18)">[Unit 78] ~때문에 긴장돼</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 19)">[Unit 79] ~하다니 실망이야</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternRed4/chapter' + 20)">[Unit 80] ~해서 참 답답해</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #C68FC4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'SpeakingPattern_Black5'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#C68FC4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 1)">[Unit 81] ~를 좋아하니?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 2)">[Unit 82] 난 ~를 좋아해</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 3)">[Unit 83] 난 ~에 빠졌어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 4)">[Unit 84] 난 ~를 좋아하지 않아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 5)">[Unit 85] 난 ~하는 방식이 마음에 안 들어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 6)">[Unit 86] ~할 때가 좋아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 7)">[Unit 87] ~하면 정말 싫어</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 8)">[Unit 88] ~에 관심 있어요?</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 9)">[Unit 89] 좋아하는 것 말하기</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 10)">[Unit 90] ~는 신경 안 써</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 11)">[Unit 91] 네~가 멋진데</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 12)">[Unit 92] 네가 ~하는 방식이 좋아</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 13)">[Unit 93] 넌 참~하구나</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 14)">[Unit 94] 넌 ~를 잘하는구나</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 15)">[Unit 95] 넌 ~감각이 뛰어나구나</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 16)">[Unit 96] ~해서 고마워</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 17)">[Unit 97] ~에 감사드려요.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 18)">[Unit 98] ~해주신다면 정말 감사하겠어요.</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 19)">[Unit 99] ~해주시니 정말 ~하세요</v-list-tile>
+          <v-list-tile @click="$router.push('/SpeakingPattern/SpeakingPatternBlack5/chapter' + 20)">[Unit 100] ~하다니 정말 고마워</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #C68FC4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Freetalking_Description'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#ff6363; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Freetalking - Description</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 1)">[Unit 1] Family</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 2)">[Unit 2] Zoo</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 3)">[Unit 3] Fruits</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 4)">[Unit 4] Mountain</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 5)">[Unit 5] Building</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 6)">[Unit 6] Beach</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 7)">[Unit 7] Subway</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 8)">[Unit 8] At the office</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 9)">[Unit 9] Business meeting</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 10)">[Unit 10] Military Training</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 11)">[Unit 11] Fashion Runway</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 12)">[Unit 12] Electronic gadget</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 13)">[Unit 13] Apartment</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 14)">[Unit 14] Amusement Park</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 15)">[Unit 15] Shopping mall</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 16)">[Unit 16] Business Establishment</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 17)">[Unit 17] Humanoid Robot</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 18)">[Unit 18] Scuba diving</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 19)">[Unit 19] South Africa</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 20)">[Unit 20] Working People</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 21)">[Unit 21] Friends</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 22)">[Unit 22] University Students</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 23)">[Unit 23] Babies</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 24)">[Unit 24] Rice</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 25)">[Unit 25] Credit and Debit Card</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 26)">[Unit 26] Typical Weather</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 27)">[Unit 27] Korean Old and New House</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 28)">[Unit 28] Women in Shape</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 29)">[Unit 29] Currency</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 30)">[Unit 30] Video Game</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 31)">[Unit 31] Karaoke</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 32)">[Unit 32] Online English Study</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 33)">[Unit 33] Risk of Smoking</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 34)">[Unit 34] Futuristic Car</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 35)">[Unit 35] Submarine Volcano</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 36)">[Unit 36] Skyrocketed Heels</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 37)">[Unit 37] Gold Investment</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 38)">[Unit 38] Seafoood</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 39)">[Unit 39] The Enemy's Affection</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 40)">[Unit 40] Eiffel Tower</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 41)">[Unit 41] Korean Girls</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 42)">[Unit 42] Golf Course</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 43)">[Unit 43] Beauty Pageant</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 44)">[Unit 44] The Beach House</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 45)">[Unit 45] The Hero</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 46)">[Unit 46] The Palace Guard</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 47)">[Unit 47] Crustacean Family</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 48)">[Unit 48] The Red Carpet</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 49)">[Unit 49] Bridges in the World</v-list-tile>
+          <v-list-tile @click="$router.push('/Freetalking-Description/Freetalking-Description-Level1/chapter' + 50)">[Unit 50] An Italian Restaurant</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #ff6363;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Freetalking - Description</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#F76830; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking - Opinion</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list" style = "line-height: 1.6;">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 1)">[Unit 1] Should I Make Small Talk First?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 2)">[Unit 2] Should We Look For Chances To Compliment Others?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 3)">[Unit 3] Should We Push People While Waiting In Line?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 4)">[Unit 4] Should We Hold The Door Open For Everyone?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 5)">[Unit 5] Should We Respond To Insults?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 6)">[Unit 6] Should We Tell On Others?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 7)">[Unit 7] Should we participate in volunteer work?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 8)">[Unit 8] Should We Build Military Robots?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 9)">[Unit 9] Is Majority Vote Really The Best Way To Make Decision?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 10)">[Unit 10] What is more important? Talent or Hard Work?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 11)">[Unit 11] Will Artificial Intelligence Technology Make Our Lives Better Or Worse??</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 12)">[Unit 12] Should We Allow Euthanasia?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 13)">[Unit 13] Should Computers Replace Teachers?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 14)">[Unit 14] Are Aliens Real?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 15)">[Unit 15] Should Companies Use Animals To Test New Products?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 16)">[Unit 16] Do Smartphones Make People Less Sociable?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 17)">[Unit 17] Do Schools Really Prepare Students For A Successful Life?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 18)">[Unit 18] Can Money Make Everyone Happy?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 19)">[Unit 19] Should a Celebrity's Private Life Be Open To The Public?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 20)">[Unit 20] Is The Korean Age System More Useful Than The Regular Age System?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 21)">[Unit 21] Should Recycling Be Mandatory?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 22)">[Unit 22] Should Plastic Bags Be Banned ?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 23)">[Unit 23] Are Multivitamins Important for Good Health?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 24)">[Unit 24] Is It Okay to Raise Exotic Animals as Pets?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 25)">[Unit 25] Should Elderly People Be Forced to Retire?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 26)">[Unit 26] Do Celebrities Deserve Special Treatment?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 27)">[Unit 27] Should Kids Be Allowed to Vote for the President?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 28)">[Unit 28] Is It Okay for Students to Get Their Ears Pierced?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 29)">[Unit 29] Should People Bathe Every Day?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 30)">[Unit 30] Is Overexertion Necessary for Success?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 31)">[Unit 31] Is There Such a Thing as Being Too Nice?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 32)">[Unit 32] Is Physiognomy Accurate?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 33)">[Unit 33] Is Astrology Accurate?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 34)">[Unit 34] Is Humility a Virtue?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 35)">[Unit 35] Is Feng Shui Accurate?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 36)">[Unit 36] Should Posthumous Works Be Allowed?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 37)">[Unit 37] Does Veganism Really Help the Environment?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 38)">[Unit 38] Should Korea Celebrate Halloween?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 39)">[Unit 39] Are Dreams Important in Our Daily Lives?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 40)">[Unit 40] Mobile Games and Video Games</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 41)">[Unit 41] Is Writing in Print Better Than Cursive?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 42)">[Unit 42] Should a Single Universal Language Exist?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 43)">[Unit 43] Are Comics Better Than Animations?</v-list-tile></p> 
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 44)">[Unit 44] Does Cold Weather Cause Colds?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 45)">[Unit 45] Will Flying Cars Ever Exist?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 46)">[Unit 46] How Important Is Marriage in Today’s Society?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 47)">[Unit 47] Are Cough Drops Unhealthy?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 48)">[Unit 48] Should Christmas Presents Be Mandatory?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 49)">[Unit 49] Are Hand Sanitizers Unhealthy?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 50)">[Unit 50] Natural Talent Versus Hard Work</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 51)">[Unit 51] Short Hair Versus Long Hair</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 52)">[Unit 52] 2D Animation Versus 3D Animation</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 53)">[Unit 53] DIY Versus Professional Services</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 54)">[Unit 54] Are Mukbangs Dangerous?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 55)">[Unit 55] Spontaneous Action Versus Planned Action</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 56)">[Unit 56] Fruits Versus Vegetables</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 57)">[Unit 57] Fresh Food Versus Frozen Food</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 58)">[Unit 58] Is Eating in Public Rude?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 59)">[Unit 59] Are Regular Visits to the Dentist Necessary?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 60)">[Unit 60] Plays Versus Musicals</v-list-tile></p> 
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 61)">[Unit 61] Pianos Versus Guitars</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 62)">[Unit 62] Is It Okay to Tell White Lies?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 63)">[Unit 63] Savory Food Versus Sweet Food</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 64)">[Unit 64] Apartments Versus Houses</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 65)">[Unit 65] Morning Exercise Versus Evening Exercise</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 66)">[Unit 66] Audio Calling Versus Video Calling</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 67)">[Unit 67] Warm Drinks Versus Cold Drinks</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 68)">[Unit 68] Savory Popcorn Versus Sweet Popcorn</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 69)">[Unit 69] Rain Versus Snow</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 70)">[Unit 70] E-Mails Versus Text Messages</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 71)">[Unit 71] Is Sighing Rude?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 72)">[Unit 72] Modern Versus Vintage</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 73)">[Unit 73] Natural Hair Versus Dyed Hair</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 74)">[Unit 74] Live Broadcast Versus Pre-Filmed Broadcast</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + 75)">[Unit 75] Raw Vegetables Versus Cooked Vegetables</v-list-tile></p>     
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking - Opinion</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+         
+          
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 1) ">[08/10] Does Cold Weather Cause Colds?<br>추운 날씨가 감기를 일으키는 것이 사실인가요?</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 2) ">[08/11] Will Flying Cars Ever Exist?<br>플라잉카가 언젠가는 존재할 가능성이 있나요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 3) ">[08/12] How Important Is Marriage in Today’s Society?<br>현재 우리 사회에서 결혼은 얼마나 중요한가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 4) ">[08/13] Are Cough Drops Unhealthy?<br>목캔디는 건강에 좋지 않은가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 5) ">[08/14] Should Christmas Presents Be Mandatory?<br>크리스마스 선물하는 전통은 의무화되어야 하나요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 6) ">[08/18] Are Hand Sanitizers Unhealthy?<br>손 소독제가 몸에 좋지 않은가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 7) ">[08/19] Natural Talent Versus Hard Work<br>타고난 재능 대 근면함</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 8) ">[08/20] Short Hair Versus Long Hair<br>단발 대 장발</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 9) ">[08/21] 2D Animation Versus 3D Animation<br>2D 애니메이션 대 3D 애니메이션</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 10) ">[08/24] DIY Versus Professional Services<br>DIY 대 전문 서비스</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 11) ">[08/25] Are Mukbangs Dangerous?<br>먹방은 위험한가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 12) ">[08/26] Spontaneous Action Versus Planned Action<br>즉흥적인 행동 대 계획된 행동</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 13) ">[08/27] Fruits Versus Vegetables<br>과일 대 야채</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 14) ">[08/28] Fresh Food Versus Frozen Food<br>신선식품 대 냉동식품</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 15) ">[08/31] Is Eating in Public Rude?<br>공공장소에서 먹는 것이 무례한 행동인가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 16) ">[09/01] Are Regular Visits to the Dentist Necessary?<br>치과를 자주 가는 것은 중요한가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 17) ">[09/02] Plays Versus Musicals<br>연극 대 뮤지컬</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit18'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 18) ">[09/03] Pianos Versus Guitars<br>피아노 대 기타</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit19'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + 19) ">[09/04] Is It Okay to Tell White Lies?<br>선의의 거짓말을 하는 것은 괜찮을까?</v-list-tile>
+        
+       
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+         
+          
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 1) ">[09/07] Savory Food Versus Sweet Food<br>짭짤한 음식 대 달콤한 음식</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 2) ">[09/08] Apartments Versus Houses<br>아파트 대 주택</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 3) ">[09/09] Morning Exercise Versus Evening Exercise<br>아침 운동 대 저녁 운동</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 4) ">[09/10] Audio Calling Versus Video Calling<br>음성 통화 대 영상 통화</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 5) ">[09/11] Warm Drinks Versus Cold Drinks<br>따뜻한 음료 대 차가운 음료</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 6) ">[09/14] Savory Popcorn Versus Sweet Popcorn<br>고소한 팝콘 대 달콤한 팝콘</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 7) ">[09/15] Rain Versus Snow<br>비 대 눈</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 8) ">[09/16] E-Mails Versus Text Messages<br>이메일 대 문자메시지</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 9) ">[09/17] Is Sighing Rude?<br>한숨은 무례한가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 10) ">[09/18] Modern Versus Vintage<br>모던 대 빈티지</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 11) ">[09/21] Natural Hair Versus Dyed Hair<br>자연스러운 머리 대 염색한 머리</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 12) ">[09/22] Live Broadcast Versus Pre-Filmed Broadcast<br>생방송 대 사전 녹화 방송</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 13) ">[09/23] Raw Vegetables Versus Cooked Vegetables<br>생야채 대 요리된 야채</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 14) ">[09/24] Korean and American Beauty Standards<br>한국과 미국의 미의 기준</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 15) ">[09/25] Korean Drama Series Versus Movies<br>한국 드라마 대 영화</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 16) ">[09/28] Digital Art Versus Traditional Art<br>디지털 아트 대 전통 아트</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + 17) ">[09/29] Amusement Parks Versus Beaches<br>놀이공원 대 바닷가</v-list-tile>
+          
+           
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG3'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+         
+          
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 1) ">[10/12] K-Pop Versus American Pop<br>케이팝 대 미국 팝</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 2) ">[10/13] Takeout Versus Delivery<br>포장 대 배달 음식</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 3) ">[10/14] Forks Versus Chopsticks<br>포크 대 젓가락</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 4) ">[10/15] Glasses Versus Contacts<br>안경 대 콘택트렌즈</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 5) ">[10/16] Should Every Child Have a Smartphone?<br>모든 아이들이 스마트폰을 가질 수 있도록 허용되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 6) ">[10/19] Should Gambling Be Banned?<br>도박은 금지되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 7) ">[10/20] Should We Get Rid of Final Exams?<br>기말고사는 없애야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 8) ">[10/21] Should Alcohol Be Banned?<br>술은 금지되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 9) ">[10/22] Laptops Versus Desktop Computers<br>노트북 대 데스크탑 컴퓨터</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 10) ">[10/23] Should People Be Allowed to Carry Concealed Handguns?<br>은폐 총기 소지</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 11) ">[10/26] Should Felons Be Allowed to Vote?<br>흉악범들이 투표하도록 허용되어야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 12) ">[10/27] Should the Death Penalty Be Allowed?<br>사형제도는 허용되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 13) ">[10/28] Does Class Size Matter?<br>학급 인원수는 중요한가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 14) ">[10/29] Should Learning a Second Foreign Language Be Compulsory?<br>제2외국어는 필수 과목으로 지정되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 15) ">[10/30] Is It Better to Take a Car Than the Subway?<br>교통수단: 자동차 대 지하철</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 16) ">[11/02] Is Spicy Food Healthy?<br>매운 음식은 건강에 좋은가요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 17) ">[11/03] Should the U.S. Deport Illegal Immigrants?<br>미국은 불법 이민자를 추방해야 하나요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit18'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 18) ">[11/04] Should We Eat Breakfast?<br>아침 식사는 꼭 해야 하나요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit19'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 19) ">[11/05] Is It Okay for Students to Drop Out of School?<br>학생들이 자퇴해도 괜찮을까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit20'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + 20) ">[11/06] Should You Study Abroad?<br>유학을 꼭 가야 하나요?</v-list-tile>
+           
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG4'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+         
+          
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 1) ">[11/09] Alternative Energy Versus Fossil Fuels<br>대체 에너지 대 화석 연료</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 2) ">[11/10] Do Aliens Exist?<br>외계인은 존재하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 3) ">[11/11] Are Ghosts Real?<br>귀신은 진짜인가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 4) ">[11/12] Should We Learn Chinese?<br>우리는 중국어를 배워야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 5) ">[11/13] Is Organic Food Healthier Than Conventional Food?<br>유기농 식품은 보통 식품보다 건강에 좋은가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 6) ">[11/16] Is Tea Healthier Than Coffee?<br>차는 커피보다 건강에 좋은가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 7) ">[11/17] Do Electronic Voting Machines Improve The Voting Process?<br>전자투표기는 투표 과정을 개선시키는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 8) ">[11/18] Should Students Have To Wear School Uniforms?<br>학생들은 교복을 입어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 9) ">[11/19] Do Violent Video Games Contribute To Youth Violence?<br>폭력적인 비디오 게임은 청소년 폭력을 야기하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 10) ">[11/20] Is Universal Basic Income A Good Idea?<br>기본소득은 좋은 생각인가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 11) ">[11/23] Should Animal Testing Be Banned?<br>동물실험은 금지 돼야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 12) ">[11/24] Is Standardized Testing A Good Practice?<br>표준화된 시험을 실시하는 것은 좋은 관행인가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 13) ">[11/25] Should Korea Lower Its Driving Age?<br>한국에서 운전 가능한 나이가 더 낮아져야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 14) ">[11/26] Should We Get Rid Of Pet Cafes?<br>펫 카페를 없애야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 15) ">[11/27] Is Homework Beneficial?<br>숙제는 도움이 되는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 16) ">[11/30] Are Cats Better Pets Than Dogs?<br>고양이는 개보다 더 나은 반려동물인가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 17) ">[12/01] Is It Okay To Have Zoos?<br>동물원이 있어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit18'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 18) ">[12/02] Should Music And Art Classes Be Mandatory?<br>음악과 미술 수업은 의무적으로 받아야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit19'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 19) ">[12/03] Should Korean Get Rid Of Honorifics?<br>한국어에서 존칭어법을 없애야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit20'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + 20) ">[12/04] Should Math Be An Optional Course After Elementary School?<br>초등학교 이후에 수학은 선택 과목이 되어야 하는가?</v-list-tile>
+           
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+  
+      <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG5'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+                  
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 1) ">[12/07] Should University Education Be Free?<br>대학 교육은 무상 교육이어야 하는가?</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 2) ">[12/08] Should The Internet Be Free?<br>인터넷은 무료화되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 3) ">[12/09] Should People Go To College?<br>대학에 가야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 4) ">[12/10] Should Tablets Replace Textbooks In School?<br>학교에서 태블릿이 교재들을 대체해야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 5) ">[12/11] Should People Become Vegetarian?<br>사람들은 채식주의자가 되어야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 6) ">[12/14] Is Social Media Good For Our Society?<br>소셜 미디어는 사회에 이로운가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 7) ">[12/15] Should Homeschooling Be Illegal?<br>홈스쿨링은 불법이 되어야만 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 8) ">[12/16] Should Cigarettes Be Banned?<br>담배를 금지해야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 9) ">[12/17] Should People Work Four Days A Week?<br>주4일 근무제를 시행 해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 10) ">[12/18] Should We Read Comic Books?<br>우리는 만화책을 읽어야 하나요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 11) ">[12/21] Are K-pop Idols Good Role Models?<br>케이팝 아이돌들이 좋은 롤 모델이 될 수 있을까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 12) ">[12/22] Should We Regulate Car Pollution?<br>자동차 오염을 규제해야 하나?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 13) ">[12/23] Should Parents Compare Their Children To Other Children?<br>부모들은 자신의 아이들과 다른 아이들을 비교해야만 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 14) ">[12/28] Are Historical Shows And Films Educational?<br>역사드라마와 영화가 교육적일까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 15) ">[12/29] Should Students Be Able To Evaluate Teachers?<br>학생들은 교사를 평가 할 수 있어야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 16) ">[12/30] Should We Invest In Self-Driving Cars?<br>우리는 자율주행차에 투자해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 17) ">[01/04] Should Airport Security Be As Invasive?<br>공항 검문소가 인권을 침해해야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit18'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 18) ">[01/05] Should We Always Respect The Police?<br>우리는 언제나 경찰을 존경해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit19'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 19) ">[01/06] Should All Shopping Be Online?<br>모든 쇼핑이 온라인에서 이루어져야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit20'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 20) ">[01/07] Should We Enforce Healthcare?<br>의료서비스를 강화해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit21'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + 21) ">[01/08] Should Caffeine Have A Legal Drinking Age?<br>카페인 복용의 법적 나이가 있어야 할까요?</v-list-tile>
+
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+                    
+            
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+                 
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'FreeTalking_Opinion_LG6'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#E5E5E5; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Free Talking Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+                  
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit1'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 1) ">[01/25] Should People Be Considered Naturally Good?<br>사람들이 천성적으로 선할까?</v-list-tile>       
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit2'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 2) ">[01/26] Should We Replace Traditional Buildings With Modern Ones?<br>우리는 현대적인 것으로 전통적인 건물을 바꾸어야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit3'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 3) ">[01/27] Should Museums Charge Money?<br>박물관들이 돈을 받아야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit4'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 4) ">[01/28] Should We Ban Rap Music In Schools?<br>학교에서 랩음악을 금지해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit5'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 5) ">[01/29] Should We Keep Letter Grades?<br>등급제를 유지해야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit6'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 6) ">[02/01] Should We Eat Bugs?<br>우리가 곤충을 먹어야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit7'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 7) ">[02/02] Should Fast Food Be Served In School?<br>학교에서 패스트푸드가 제공 되어야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit8'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 8) ">[02/03] Is History An Important Subject In School?<br>학교에서 역사는 중요한 과목일까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit9'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 9) ">[02/04] Should Students Take A Gap Year?<br>대학 생활 전 1년을 여행하면서 보내야 할까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit10'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 10) ">[02/05] Ban Students From Using Social Media<br>학생들의 소셜 미디어 사용 금지</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit11'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 11) ">[02/08] Koreans Should Eat Mostly Vegetables<br>한국인들은 채소를 위주로 먹어야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit12'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 12) ">[02/09] Korea Should Abolish Same-Sex Schools<br>한국의 동성이 다니는 학교를 없애야 하는가?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit13'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 13) ">[02/10] Happiness Is More Important Than Success<br>행복은 성공보다 중요하다</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit14'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 14) ">[02/11] Collective Punishment In School Is Fair<br>학교에의 집단 채벌이 공정한 것인가</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit15'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 15) ">[02/12] High School Students Should Have Afterschool Jobs<br>고등학생들이 방과후에 직업을 가져야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit16'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 16) ">[02/15] Is Educational Technology Useful in the Classroom?<br>교육적 테크놀로지가 유용한 것일까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit17'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 17) ">[02/16] Should Public Transportation in Seoul Be Free In Case of Severe Pollution?<br>스포츠 경기에서 정치적 발언이 허용되어야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit18'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 18) ">[02/17] Is Flying To Mars A Waste Of Time And Money?<br>극심한 공해에 대비해서 서울시 대중교통 요금을 무료로 해야 할까?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit19'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 19) ">[02/18] Should we stop celebrating unofficial holidays?<br>화성으로 가는 것은 시간과 돈의 낭비일까요?</v-list-tile>
+          <v-list-tile class = "lg" :class="{'lastUrl': onHighlight == 'unit20'}" @click="$router.push('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit' + 20) ">[02/19] Should we replace Konglish with new Korean words?<br>비공식 휴일을 중단해야 할까요?</v-list-tile>
+        </v-list>
+      </v-list>
+       
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Free Talking Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+                    
+            
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+                 
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<div v-if="$route.name === 'Level_test'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#F76830; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Level Test</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #F76830;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Level Test</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+      
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<div v-if="$route.name === 'Interview_Step1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#de7119; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Interview English</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 1)">[Unit 1] Tell me about yourself</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 2)">[Unit 2] What is your major?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 3)">[Unit 3] What made you choose your university?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 4)">[Unit 4] What are your work experiences?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 5)">[Unit 5] What interests you about this job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 6)">[Unit 6] What can you do for this company?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 7)">[Unit 7] What interest you about this job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 8)">[Unit 8] How long do you expect to remain employed with this company?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 9)">[Unit 9] Do you prefer to work independently or on a team?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 10)">[Unit 10] What applicable attributes/experiences do you have?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 11)">[Unit 11] What is your greatest strength?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 12)">[Unit 12] What type of work environment do you prefer?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 13)">[Unit 13] What are your salary expectations?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 14)">[Unit 14] Are you a self motivator?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 15)">[Unit 15] Where do you see yourself five years from now?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 16)">[Unit 16] What are your goals for the next three or five years?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 17)">[Unit 17] What are you passionate about?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 18)">[Unit 18] What has been the greatest disappointment in your life?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 19)">[Unit 19] What will you do if you don’t get this position?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 20)">[Unit 20] What did you like or dislike about your previous job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 21)">[Unit 21] What challenges are you looking for?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 22)">[Unit 22] What is your philosophy towards work?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 23)">[Unit 23] What is more important to you : money or work?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 24)">[Unit 24] What do your previous co-workers say about you?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 25)">[Unit 25] What motivates you to do your best on the job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 26)">[Unit 26] What qualities do you look for in a boss?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 27)">[Unit 27] How would you know you were successful on this job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 28)">[Unit 28] What have you learned from mistakes on the job?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 29)">[Unit 29] If you were hiring a person for this job, what would you look for?</v-list-tile></p>
+          <p><v-list-tile @click="$router.push('/Interview-English/Interview-EnglishStep1/chapter' + 30)">[Unit 30] How do you handle criticism?</v-list-tile></p>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #de7119;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Interview English</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+<div v-if="$route.name === 'Travel_English'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#0779e4; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Travel English</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 1)">[Unit 1] On the Plane</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 2)">[Unit 2] Finding Seats</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 3)">[Unit 3] In-flight Meal</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 4)">[Unit 4] In-flight Service</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 5)">[Unit 5] At The Airport</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 6)">[Unit 6] Immigration Counter</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 7)">[Unit 7] Baggage Claim</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 8)">[Unit 8] Exchange</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 9)">[Unit 9] Going to the Hotel</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 10)">[Unit 10] At a Hotel</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 11)">[Unit 11] Room Card</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 12)">[Unit 12] Wake Up Call</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 13)">[Unit 13] Fitness Center</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 14)">[Unit 14] Swimming Pool</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 15)">[Unit 15] Information Center</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 16)">[Unit 16] Tourist Books</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 17)">[Unit 17] Finding a Way 2</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 18)">[Unit 18] At Tourist Spots</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 19)">[Unit 19] At a Tourist Spot 1</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 20)">[Unit 20] At a Tourist Spot 2</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 21)">[Unit 21] Shopping</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 22)">[Unit 22] Shopping 1</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 23)">[Unit 23] Shopping 2</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 24)">[Unit 24] In an Emergency 1</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 25)">[Unit 25] In an Emergency 2</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 26)">[Unit 26] At a Hotel, Check-out</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 27)">[Unit 27] At the Airport, check-in</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 28)">[Unit 28] At the Airport, Going Through Security</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 29)">[Unit 29] At the Airport, Tax Refund</v-list-tile>
+          <v-list-tile @click="$router.push('/TravelEnglish/TravelEnglish1/chapter' + 30)">[Unit 30] At the Airport, Departing</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #0779e4;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Travel English</v-toolbar-title>
+      <img src="https://img.icons8.com/ios-filled/50/000000/airplane-take-off.png" style="max-width: 30%; display:block; height: 55%;"/>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+         <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'IT_Issues'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color:#59CCD9; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>IT Issues</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 1)">[Unit 1] Sharpening Blurry Faces with AI</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 2)">[Unit 2] Artificial Brain Synapses</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 3)">[Unit 3] Big Data, Big Impact</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 4)">[Unit 4] The Future of Big Data</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 5)">[Unit 5] Benefits of IoT Data Analytics</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 6)">[Unit 6] Machine learning</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 7)">[Unit 7] Machine learning</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 8)">[Unit 8] Artificial Intelligence</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 9)">[Unit 9] Big Data</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 10)">[Unit 10] cloud</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 11)">[Unit 11] software</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 12)">[Unit 12] AI</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 13)">[Unit 13] Machine learning</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 14)">[Unit 14] IoT</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 15)">[Unit 15] software</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 16)">[Unit 16] IoT</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 17)">[Unit 17] IoT</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 18)">[Unit 18] Machine learning</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 19)">[Unit 19] Machine learning</v-list-tile>
+          <v-list-tile @click="$router.push('/IT-Issues/IT-Issues1/unit' + 20)">[Unit 20] Machine learning</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #59CCD9;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">IT Issues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+            <v-row>
+             <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                     <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn> 
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Speaking_Pattern_Drills'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #fafafa; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Speaking Pattern Drills</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #fafafa;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "pink accent-2">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Speaking Pattern Drills</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Debatable_Topics_Step1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #E6F4F1; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Debatable Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #E6F4F1;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#00A1BF">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Debatable Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Debatable_Topics_Step2'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #E6FFF8; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Debatable Topics</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #E6FFF8;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#00A6A1">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Debatable Topics</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<div v-if="$route.name === 'Situational_Dialogues_1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #f1faee; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Situational Dialogues</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #f1faee;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#457b9d">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Situational Dialogues</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'Discussion_Analysis_1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #DCF2FF; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Discussion and Analysis</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #DCF2FF;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#61AEFF">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px;">Discussion and Analysis</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+<div v-if="$route.name === 'First-Step-Conversation1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #fafafa; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>First Step in Conversation</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #fafafa;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#57c9d0">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px; color : #364f6b; ">First Step in Conversation</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<div v-if="$route.name === 'Milestone1'">
+  <v-layout>
+    <v-navigation-drawer v-model="drawer" :mini-variant="mini" absolute style="background-color: #fafafa; position:fixed; top:0; left:0; overflow-y:hidden;" temporary>
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar>
+            <img src="http://cdn.onlinewebfonts.com/svg/img_97686.png">
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>MILESTONES 1</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+      <v-divider></v-divider>
+      <v-list>
+        <template v-slot:activator>
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>book</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-title>Table of Contents</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list class="custom-list">
+          <v-list-tile>
+            <h2>Table of Contents</h2>
+          </v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultBeginner')">Beginner</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultInt')"> Intermediate</v-list-tile>
+          <v-list-tile @click="$router.push('/LevelTest/Adult/AdultAdv')">Advanced</v-list-tile>
+        </v-list>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar flat app :fixed="toolbar.fixed" :clipped-left="toolbar.clippedLeft" style="background-color: #ffffff;">
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"><v-icon large color = "#d63447">menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-title style="margin-left: 0px; margin-right: 5px; color : #364f6b; ">MILESTONES 1</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <template v-if="speechSlot" #extension>
+        <v-container>
+          <v-row>
+            <v-toolbar-items>
+
+              <v-layout align-space-between justify-center row fill-height>      
+              <v-col cols="4" v-if = "playArrow">
+                <v-icon @click="playSound()" medium class="ml-1" color="black">far fa-play-circle</v-icon>
+              </v-col>
+              <v-col cols="4" v-else>
+                <v-icon @click="pauseSound()" medium class="ml-1" color="black">far fa-pause-circle</v-icon>
+              </v-col>
+         
+              <v-col cols="4">
+                <v-icon @click="stopSound()" medium color="black" class="ml-2">far fa-stop-circle</v-icon>
+              </v-col>
+
+             
+            <v-flex xs12 md4>
+              <v-progress-linear id="progress" :value="percentage" height="3" background-opacity = "0.5" color="blue-grey darken-3" style = "margin: 15px;" @click.native="onClickProgress($event)"></v-progress-linear>
+            </v-flex>
+      </v-layout>
+
+              <v-col cols="4">
+                <v-menu offset-y>
+                  <!-- <template v-slot:activator="{ on }">
+                    <v-btn v-on="on" depressed block text color="#c38b8b">{{speechRateText}}</v-btn>
+                  </template> -->
+                  <v-list>
+                    <v-list-item>
+                      <v-list-item-title class="mx-2" @click="changeSpeechRate($event)"><center>0.75x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2"  @click="changeSpeechRate($event)"><center>1x</center></v-list-item-title>
+                    </v-list-item>
+                    <v-divider></v-divider>
+                    <v-list-item>
+                      <v-list-item-title  class="mx-2" @click="changeSpeechRate($event)"><center>1.25x</center></v-list-item-title>
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </v-col>
+            </v-toolbar-items>
+          </v-row>
+        </v-container>
+      </template>
+      <v-icon v-on="on" color="black" @click="speechSlot = !speechSlot" large>volume_up</v-icon>
+      <v-menu min-width="40%" offset-y>
+        <template v-slot:activator="{ on }" style="min-width:100%;">
+          <v-toolbar-title v-on="on">
+            <span>ᴀA</span>
+          </v-toolbar-title>
+        </template>
+        <v-list style="overflow-y: hidden;">
+          <v-list-tile>
+            <v-slider v-model="fontSize" :min="1" :max="40" :step="1"></v-slider>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-toolbar>
+  </v-layout>
+</div>
+
+
+<v-container grid-list-md text-xs-left class = "pa-0">
+            <v-layout align-center justify-center row fill-height>
+
+
+              <v-flex xs12 md6>
+
+                <router-view :fontSize="fontSize"></router-view>
+
+              </v-flex>
+            </v-layout>
+</v-container>
+
+</v-app>
+</template>
+
+
+
+<script>
+
+import Speech from 'speak-tts'
+import Vue from 'vue'
+import axios from 'axios'
+
+
+export default {
+ 
+  data: () => ({
+  
+      drawer: null,
+      pathname: window.location.pathname,
+      items: [{
+        title: 'Home',
+        icon: 'dashboard'
+      },
+      {
+        title: 'About',
+        icon: 'question_answer'
+      }
+    ],
+    mini: false,
+    right: null,
+    toolbar: {
+      //
+      fixed: true,
+      // sets if the toolbar contents is leaving space for drawer (false) or not (true)
+      clippedLeft: false,
+    },
+    icon: 'play_arrow',
+    speech: new Speech(),
+    stop_button: false,
+    selectedString: '',
+    speechRateText: '1x',
+    speechRate: 1,
+    fontSize: 20,
+    speechInfo: true,
+    speechSlot: false,
+    playArrow: true,
+    audioPlaying: false,
+    audio: '',
+    percentage: 0,
+    audioPercent: 0,
+   
+    
+
+
+    bookSrc: '',
+  }),
+  
+watch: {
+  fontSize(current, old) {
+  },
+
+  $route (to, from){
+    var lastPath = to.path.split("/") 
+    var last = lastPath[lastPath.length -1]
+    this.onHighlight = last
+    console.log(typeof to.path,"you")
+    console.log(this.onHighlight,"high")
+    console.log(last,"asd")
+     
+    this.stopSound()
+    this.audio = ''
+  },
+
+  audioPlaying: function(){
+    
+  },
+
+},
+
+mounted() {
+  this.speech.cancel()
+  console.log(window.location.href)
+  this.onHighlight()
+},
+
+
+
+methods: {
+
+
+
+  onHighlight() {
+    this.onHighlight = window.location.href
+    var str = this.onHighlight;
+    var res = str.split("/")
+    this.onHighlight = res
+    this.onHighlight = this.onHighlight[this.onHighlight.length -1]
+    console.log(this.onHighlight,"dsafsdf")
+    console.log(this.onHighlight[this.onHighlight.length -1],"onclick")
+    
+
+  },
+
+ 
+
+  onSeeking(){
+    console.log('seek')
+  },
+
+   onClickProgress(event) {
+           
+            let el = document.getElementById("progress"),          
+               mousePos = event.offsetX,
+               elWidth = el.clientWidth,
+               percents = (mousePos / elWidth) * 100;
+            
+
+                this.audio.pause()
+                this.audioPercent = percents                              
+                this.percentage = this.audioPercent                                            
+                this.audio.currentTime = this.percentage / 100 * this.audio.duration     
+                this.playArrow = false         
+                this.audio.play()
+                   
+                          
+                            
+                    
+             // this.audio.preload = 'metadata'
+              // var vm = this
+              // this.audio.addEventListener('canplaythrough', function(){
+              //     console.log(vm.percentage)
+              //     vm.audio.currentTime = 10
+              // })
+              
+              console.log(this.percents + "piatos")
+              console.log(this.audioPlaying + "cracker")
+              console.log(this.audioPlaying + "fish")
+              console.log(this.audio.currentTime + "lala")
+              console.log(this.percentage)
+              console.log(this.audio.duration)
+              console.log(this.percentage / 100 * this.audio.duration)
+            
+        },
+
+  setPosition () {     
+               this.percentage  =  this.audio.currentTime / this.audio.duration * 100
+               if(this.percentage == 100){
+                 this.percentage = 0;
+                 this.stopSound()
+                 
+               } 
+            },
+
+  playSound() {
+
+
+    if(this.audio.paused && !this.audioPlaying){
+          this.audio.play(); 
+          this.playArrow = false
+      } else{
+
+        if(this.$router.history.current.fullPath.indexOf('/FreeTalking-QnA/FreeTalking-STEP1') != -1){
+        for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-QnA/FreeTalking-STEP1/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalkingQ&A/White/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();      
+          setInterval(this.setPosition, 1)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-QnA/FreeTalking-STEP2') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-QnA/FreeTalking-STEP2/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalkingQ&A/Yellow/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-QnA/FreeTalking-STEP3') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-QnA/FreeTalking-STEP3/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalkingQ&A/Green/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-QnA/FreeTalking-STEP4') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-QnA/FreeTalking-STEP4/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalkingQ&A/Red/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/DialogueBooks/DialogueLevel1') != -1){
+      for(var i = 0; i < 29; i++){
+        if(this.$router.history.current.fullPath === '/DialogueBooks/DialogueLevel1/chapter' + i){
+          this.audio = new Audio('../../audio/DialogueBooks/White/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/DialogueBooks/DialogueLevel2') != -1){
+      for(var i = 0; i < 29; i++){
+        if(this.$router.history.current.fullPath === '/DialogueBooks/DialogueLevel2/unit' + i){
+          this.audio = new Audio('../../audio/DialogueBooks/Yellow/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/DialogueBooks/DialogueLevelGreen3') != -1){
+      for(var i = 0; i < 29; i++){
+        if(this.$router.history.current.fullPath === '/DialogueBooks/DialogueLevelGreen3/unit' + i){
+          this.audio = new Audio('../../audio/DialogueBooks/Green/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalkingOpinion/FreeTalkingOpinion1') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalkingOpinion/FreeTalkingOpinion1/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG1/unit' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion-LG1/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG2/unit' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion-LG2/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion-LG3/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion-LG4/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5') != -1){
+      for(var i = 0; i < 76; i++){
+        if(this.$router.history.current.fullPath === '/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Opinion-LG5/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/PrototypeBusiness/BusinessStep1') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/PrototypeBusiness/BusinessStep1/chapter' + i){
+          this.audio = new Audio('../../audio/Business-Book/BusinessStep1/Unit'  +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+    
+    if(this.$router.history.current.fullPath.indexOf('/PrototypeBusiness/BusinessStep2') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/PrototypeBusiness/BusinessStep2/chapter' + i){
+          this.audio = new Audio('../../audio/Business-Book/BusinessStep2/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/PrototypeBusiness/BusinessStep3') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/PrototypeBusiness/BusinessStep3/chapter' + i){
+          this.audio = new Audio('../../audio/Business-Book/BusinessStep3/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/PrototypeBusiness/BusinessStep4') != -1){
+      for(var i = 0; i < 21; i++){
+        if(this.$router.history.current.fullPath === '/PrototypeBusiness/BusinessStep4/chapter' + i){
+          this.audio = new Audio('../../audio/Business-Book/BusinessStep4/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/TravelEnglish/TravelEnglish1') != -1){
+      for(var i = 0; i < 31; i++){
+        if(this.$router.history.current.fullPath === '/TravelEnglish/TravelEnglish1/chapter' + i){
+          this.audio = new Audio('../../audio/TravelEnglish/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/pattern-course/grammar-in-pattern-basic') != -1){
+      for(var i = 0; i < 31; i++){
+        if(this.$router.history.current.fullPath === '/pattern-course/grammar-in-pattern-basic/chapter' + i){
+          this.audio = new Audio('../../audio/GrammarPattern_Basic/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/Freetalking-Description/Freetalking-Description-Level1') != -1){
+      for(var i = 0; i < 51; i++){
+        if(this.$router.history.current.fullPath === '/Freetalking-Description/Freetalking-Description-Level1/chapter' + i){
+          this.audio = new Audio('../../audio/FreeTalking-Description/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/Interview-English/Interview-EnglishStep1') != -1){
+      for(var i = 0; i < 31; i++){
+        if(this.$router.history.current.fullPath === '/Interview-English/Interview-EnglishStep1/chapter' + i){
+          this.audio = new Audio('../../audio/Interview-English/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+    if(this.$router.history.current.fullPath.indexOf('/IT-Issues/IT-Issues1') != -1){
+      for(var i = 0; i < 31; i++){
+        if(this.$router.history.current.fullPath === '/IT-Issues/IT-Issues1/unit' + i){
+          this.audio = new Audio('../../audio/IT_Issues/Unit' +i+ '.mp3')
+          this.icon = "pause";
+          this.audioPlaying = true;
+          this.playArrow = false;
+          this.audio.play();
+          setInterval(this.setPosition, 50)
+        }
+      }
+    }
+
+
+    if(this.$router.history.current.fullPath.indexOf('/freetalking/beginner') != -1){
+     
+      for (var i = 1; i <= 40; i++) {
+         
+       for (var j = 1; j <= 3; j++) {
+
+      
+           if(this.$router.history.current.fullPath === '/freetalking/beginner/Chapter' +i+ 'Unit' + j){
+             this.audio = new Audio('../../audio/PerfectReading/Unit' +i+ "_" +j+ '.mp3')
+             this.icon = "pause";
+             this.audioPlaying = true;
+             this.playArrow = false;
+             this.audio.play();
+             setInterval(this.setPosition, 50)
+           } 
+           
+     
+          }
+         }
+       }
+
+
+  }
+},
+
+  pauseSound() {
+    this.audio.pause()
+    this.audioPlaying = false;
+    this.playArrow = true;
+  },
+
+  stopSound() {
+    console.log('hello')
+    this.audio.pause()
+    this.audio.currentTime = 0;
+    this.playArrow = true;
+    this.audioPlaying = false;
+  },
+
+  
+  
+ 
+  textToSpeech() {
+    var string = this.$el.innerText
+    var string2
+    if(this.speechRate == 0.75 || this.speechRate == 1.25 ){
+      string2 = string.slice(528, string.length).trim().replace(/\s/g,' ')
+    }else if(this.speechRate == 1){
+      string2 = string.slice(526, string.length).trim().replace(/\s/g,' ')
+    }
+
+    this.speech.init({
+      volume: 1,
+      lang: "en-US",
+      rate: this.speechRate,
+      pitch: 1,
+    }).then((data) => {
+    }).catch(e => {})
+    this.speech.setVoice('Google US English')
+    this.speech.speak({
+      text: string2.trim()
+    }).then(() => {
+      console.log("Success !")
+    }).catch(e => {
+      console.error("An error occurred :", e)
+    })
+    if (this.speech.speaking()) {
+      document.addEventListener('mouseup', event => {
+        this.selectedString = event.target.innerText
+        console.log(this.selectedString != "play_arrow" && this.selectedString != "pause" && this.selectedString != "0.5X" && this.selectedString != "1X" && this.selectedString != "1.5X")
+        if(this.selectedString != "play_arrow" && this.selectedString != "pause" && this.selectedString != "0.5X" && this.selectedString != "1X" && this.selectedString != "1.5X" && this.selectedString != "0.5x" && this.selectedString != "1x" && this.selectedString != "1.5x"){
+          this.speech.cancel();
+          this.selectedTextToSpeech()
+        }
+        if(this.selectedString == "play_arrow"){
+          console.log('resume')
+          this.speech.resume()
+          this.icon = "pause";
+        }else if(this.selectedString == "pause"){
+          console.log('pause')
+          this.speech.pause()
+          this.icon = "play_arrow";
+        }
+      })
+      Vue.set(this.$data, 'icon', 'pause')
+    }else{
+      if(this.selectedString == "pause"){
+        this.speech.pause()
+        this.icon = "play_arrow"
+      }else if(this.selectedString == "play_arrow"){
+        this.speech.resume()
+        this.icon = "pause"
+      }
+    }
+  },
+
+  stopSpeech() {
+    Vue.set(this.$data, 'icon', 'play_arrow')
+    this.speech.cancel()
+  },
+
+  selectedTextToSpeech() {
+    if (!this.speech.speaking()) {
+      this.speech.init({
+        volume: 1,
+        lang: "en-US",
+        rate: this.speechRate,
+        pitch: 1,
+      }).then((data) => {}).catch(e => {})
+      console.log(this.selectedString)
+      this.speech.speak({
+        text: this.selectedString,
+        listeners: {
+          onend: () => {
+            Vue.set(this.$data, 'icon', 'play_arrow')
+          }
+        }
+      }).then(() => {
+        console.log("Success !")
+      }).catch(e => {
+        console.error("An error occurred :", e)
+      })
+      /*
+      if(this.selectedString == "pause"){
+      this.speech.pause()
+      this.icon = "play_arrow"
+    }else if(this.selectedString == "play_arrow"){
+    this.speech.resume()
+    this.icon = "pause"
+  }*/
+  Vue.set(this.$data, 'icon', 'pause')
+}
+},
+
+changeSpeechRate(selected){
+  this.speechRateText = selected.target.innerText
+  if(selected.target.innerText == "0.5x"){
+    this.speech.setRate(0.75)
+    this.speechRate = 0.75
+  }
+  if(selected.target.innerText == "1x"){
+    this.speech.setRate(1)
+    this.speechRate = 1
+  }
+  if(selected.target.innerText == "1.5x"){
+    this.speech.setRate(1.25)
+    this.speechRate = 1.25
+  }
+}
+},
+}
+
+</script>
+<style>
+.custom-list {
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+.unit a{
+  height: 20px;
+
+}
+
+
+.ch {
+  height: 35px;
+
+}
+
+
+.lg a{
+  height: 80px;
+  line-break: strict;
+  word-break: keep-all;
+}
+
+
+
+/* .lastUrl{
+  color: #2f4674;
+  background-color: rgba(28, 157, 255, 0.1);
+} */
+
+.lastUrl a{
+  color: #2f4674;
+  background: linear-gradient(rgba(28, 157, 255, 0.1), rgba(28, 157, 255, 0.1)) no-repeat;
+  background-position:100% 0%;
+  background-size:100% 100%;
+ 
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #666666;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+} 
+
+</style>

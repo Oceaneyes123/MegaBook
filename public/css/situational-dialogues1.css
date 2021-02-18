@@ -1,0 +1,40 @@
+.upper-header-SD1 {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+
+.lower-header-SD1 {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #1d3557;
+}
+
+.border-test1-SD1 {
+    position: relative;
+    border: 3px solid #457b9d;
+    color: #457b9d;
+    line-height: 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 16px;
+    margin-right: -18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 180px;
+    text-align: center;
+}
+
+.border-test2-SD1 {
+    position: relative;
+    border: 3px solid #457b9d;
+    color: #457b9d;
+    line-height: 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 16px;
+    margin-right: -18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 230px;
+    text-align: center;
+}

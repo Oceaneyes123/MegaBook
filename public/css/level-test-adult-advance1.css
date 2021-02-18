@@ -1,0 +1,50 @@
+.upper-header-LTA1 {
+
+    margin: 0 -30px -8px;
+    overflow: hidden;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 25px;
+    background-color: #7F5C49;
+    border: 0px solid #afcde3;
+
+}
+
+.top-line-LTA1 {
+
+    border: 3px solid #7F5C49;
+    width: 100%;
+
+}
+
+.lower-header-LTA1 {
+
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+
+}
+
+.border-LTA1 {
+
+    margin-left: -15px;
+    overflow: hidden;
+    line-height: 40px;
+    display: inline-block;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 20px;
+    background-color: #FF8B42;
+    border: 0px solid #afcde3;
+    color: white;
+
+}
+
+
+.line-LTA1 {
+
+    margin-left: -15px;
+    margin-top: -6px;
+    border: 3px solid #FF8B42;
+    width: 103%;
+}

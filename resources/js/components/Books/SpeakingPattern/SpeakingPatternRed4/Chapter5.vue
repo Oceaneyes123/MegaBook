@@ -1,0 +1,188 @@
+<template>
+
+<div :style = "{fontSize: fontSize + 'px'}">
+
+<v-container fluid ma-0 pa-0>
+
+  <v-layout column>
+    <v-img
+           src="https://image.freepik.com/free-photo/group-business-people-meeting_155003-10956.jpg">
+
+        <v-layout
+        align-end
+        fill-height
+        pa-2
+        black--text
+      >
+     <h1 class="upper-header-SPR4">이건 완전히 ~야
+  </h1>
+      </v-layout>
+    </v-img>
+
+
+          <h2 class="lower-header-SPR4">Today's topic</h2>
+
+  <hr width="60%">
+               <div style="padding : 10px; line-height: 200%;">
+
+                 <h2>Pattern 65 |  </h2>
+                  <br />
+                  <h3>This is totally….</h3>
+                    <br />
+                    <p>
+                    그냥 간단히 this is… 라고 말해도 되지만, totally를 쓰면 우리말의 ‘완전히’와 같이 극단적으로 강조하는 표현이 된다. 특히 젊은 층이 많이 사용하는 표현이다.
+                    </p>
+                    <br />
+
+<h2 class = "border-SPR4">Dialogue
+</h2>
+
+<div style="padding-top : 10px; padding-bottom : 2px;">
+
+          <br />
+          <p style="line-height: 2;">
+            A : What? Our lecture got canceled?<br />
+            B : Yep.<br />
+            A : <b>이거 완전 최곤데.</b><br />
+            B : I know.
+          </p>
+          <p style="line-height: 2;">
+            A : 뭐? 우리 강의가 휴강됐다고?<br />
+            B : 응.<br />
+            A : <mark style="background-color: #a7d7c5; color: #d9e7cd;">This is totally awesome.</mark><br />
+            B : 그러게 말이야.
+          </p>
+          <br />
+
+
+</div>
+
+<h2  class = "border-SPR4">Pattern Practice
+</h2>
+
+<div style="padding-top : 10px; padding-bottom : 0px;">
+
+        <br />
+
+        <p>
+          &rarr; 우리말을 보고 순식간에 영어로 말할 수 있을 때까지 반복하세요!
+        </p>
+        <br />
+
+        <p>
+          <b>513</b> 이거 완전 최고야. ( awesome ) <br />
+              *awesome  굉장한, 아주 멋진 <br />
+        </p>
+        <p>
+          <b>514</b> 이건 완전히 생각지도 못한 거야. ( unexpected ) <br />
+        </p>
+        <p>
+          <b>515</b> 이건 정말 내가 원하던 거예요. ( what, want ) <br />
+        </p>
+        <p>
+          <b>516</b> 이거 완전 바보 같아. ( stupid ) <br />
+        </p>
+        <p>
+          <b>517</b> 이건 완전히 말도 안 된다고. ( ridiculous ) <br />
+        </p>
+        <p>
+          <b>518</b>  <br />
+        </p>
+        <p>
+          <b>519</b>  <br />
+        </p>
+        <p>
+          <b>520</b>  <br />
+        </p>
+        <v-container grid-list-md text-xs-left>
+      <v-layout row wrap>
+
+
+          <v-flex xs12>
+          <v-card light color="#a7d7c5">
+            <v-card-text class="px-10" style="color:#d9e7cd;">
+              513 This is totally awesome.<br />
+              514 This is totally unexpected.<br />
+              515 This is totally what I wanted.<br />
+              516 This is totally stupid.<br />
+              517 This is totally ridiculous.<br />
+              518 This is totally cool.<br />
+              519 This is totally out of my league.<br />
+              520 This is totally fine with me.<br />
+            </v-card-text>
+          </v-card>
+        </v-flex>
+      </v-layout>
+  </v-container>
+
+</div>
+
+</div>
+
+
+       </v-layout>
+     </v-container>
+</div>
+
+
+
+</template>
+
+
+
+<script>
+export default {
+
+  props: ['fontSize'],
+
+  data(){
+
+    return{
+
+
+    }
+
+  },
+
+
+  beforeMount(){
+
+
+  },
+
+  methods:{
+
+
+  },
+
+  watch:{
+
+    fontSize(current, old){
+
+      console.log(current, 'current')
+      console.log(old, 'previous')
+
+
+    }
+  }
+}
+</script>
+
+<style lang="css">
+
+p{
+
+  margin-top: 10px;
+}
+
+h3{
+  padding-top: 7px;
+
+}
+
+body{
+
+  font-size: 16px;
+}
+
+</style>

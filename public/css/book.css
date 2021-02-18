@@ -1,0 +1,74 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+/** for all the book **/
+
+.standard-table {
+    border-collapse: collapse;
+}
+
+p {
+
+    margin-top: 10px;
+}
+
+h3 {
+    padding-top: 7px;
+
+}
+
+
+body {
+
+    font-size: 16px;
+}
+
+
+
+  /**for the dialog on every book**/
+  .uppertable {
+    border: 0px solid #dddddd;
+    text-align: left; padding: 8px;
+    vertical-align:top;
+    width: 0%;
+  }
+
+  .lowertable {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  overflow-wrap: break-word;
+  width: 100%;
+  }
+
+}
+
+/**this is for the korean text to be inorder**/
+.korean {
+
+    line-break: strict;
+    word-break: keep-all;
+}
+
+.uppertable {
+    border: 0px solid #dddddd;
+    text-align: left; padding: 2px;
+    vertical-align:top;
+    width: 0%;
+  }
+
+  .lowertable {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 2px;
+  overflow-wrap: break-word;
+  width: 100%;
+  }
+
+/** this is for the cover photos inorder the title of the book will be attach to the line on the bottom **/
+/** make the cover photo to full size in pc view and mobile view**/
+
+.cover-photo {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}

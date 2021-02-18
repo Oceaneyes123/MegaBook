@@ -1,0 +1,37 @@
+.upper-header-DT1 {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 5px;
+}
+
+.lower-header-DT1 {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #A83900;
+}
+
+.left-border-DT1 {
+    position: relative;
+    background: #00AAB2;
+    line-height: 20px;
+    border-radius: 70px 70px 70px 0px;
+    margin-left: 16px;
+    margin-right: -18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.right-border-DT1 {
+    position: relative;
+    background: #00AAB2;
+    line-height: 20px;
+    border-radius: 70px 0px 70px 70px;
+    margin-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 230px;
+    text-align: center;
+}

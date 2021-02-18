@@ -1,0 +1,27 @@
+.title-M1 {
+    position: relative;
+    width: 100%;
+    padding-top: 70px;
+    color: #f57b51;
+}
+
+.upper-header-FSC1 {
+    position: relative;
+    width: 100%;
+    padding-top: 5px;
+    color: #364f6b;
+}
+
+.lower-header-M1 {
+    color: #d1cebd;
+}
+
+.border-M1 {
+    color: #364f6b;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.rounded-card-FSC1 {
+    border-radius: 20px;
+}

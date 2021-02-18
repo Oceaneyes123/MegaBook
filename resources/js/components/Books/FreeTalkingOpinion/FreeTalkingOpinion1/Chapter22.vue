@@ -1,0 +1,211 @@
+<template>
+
+  <div :style = "{fontSize: fontSize + 'px'}">
+
+    <v-container fluid ma-0 pa-0>
+
+      <v-layout column>
+        <v-img
+        src="https://image.freepik.com/free-photo/front-view-plastic-covering-earth-globe_23-2148557672.jpg" style="max-width: 100%; display:block; height: auto;">
+
+        <v-layout
+        align-end
+        fill-height
+        pa-0
+        white--text
+        >
+        <transition name="slide-fade">
+        <h1 v-if="showTitle" class="upper-header-opinion1">Should Plastic Bags Be Banned ?
+      </h1>
+      </transition>
+    </v-layout>
+  </v-img>
+
+  <div class="line-top-opinion1">
+  </div>
+
+  <h3  class = "lower-header-opinion1 white--text">Topic</h3>
+  <div style = "line-height: 1.6;">
+    <div style="padding : 16px;">   
+
+    <table class = "standard-table">
+
+    <tr>
+      <td class = "uppertable" ><b>A :</b></td>
+      <td class = "lowertable" >Plastic bags shouldn't be banned, because people are accustomed to them.
+      They're so convenient, too! I'm sure that Scientists are looking for solutions to make plastic bags become ecofriendly.</td>
+    </tr>
+    <tr style="color:#1565C0;">
+      <td class = "uppertable" ><b>B :</b></td>
+      <td class = "lowertable" >Plastic bags are extremely harmful to all life on Earth.
+      They pollute our water and land, and they contribute to climate change.
+      We need to ban plastic bags and use alternatives immediately.</td>
+    </tr>
+
+    </table>
+
+    </div>
+
+      <div class = "line-opinion1">
+      </div>
+      <h3 class = "border-opinion1 white--text">Vocabulary</h3>
+      <div style="padding : 16px;">
+
+        <p>
+          <b>accustomed</b> 익숙한
+        </p>
+        <p>
+          <b>convenient</b> 편리한
+        </p>
+        <p>
+          <b>solution</b> 해법
+        </p>
+        <p>
+          <b>eco friendly</b> 친환경적인
+        </p>
+        <p>
+          <b>extremely</b> 극도로
+        </p>
+        <p>
+          <b>harmful</b> 해로운
+        </p>
+        <p>
+          <b>pollute</b> 오염시키다
+        </p>
+        <p>
+          <b>contribute</b> 한 원인이 되다
+        </p>
+        <p>
+          <b>climate</b> 기후
+        </p>
+        <p>
+          <b>alternative CHP immediately</b> 즉시
+        </p>
+        <br />
+        <p style="color: #56AAFF;">
+          <b>look for ~을 찾다.</b>
+        </p>
+
+      </div>
+
+      <div class = "line-opinion1">
+      </div>
+      <h3 class = "border-translate-opinion1 white--text">해석</h3>
+      <div style="padding : 16px;">
+
+
+                      <p class = "korean">
+                        <b>
+                        비닐봉지는 금지되어야 하는가?
+                        </b>
+                      </p>
+
+                      <table class = "standard-table">
+
+                       <tr>
+                        <td class = "uppertable" ><b>A :</b></td>
+                        <td class = "lowertable" style = "word-break: keep-all" >사람들이 비닐봉지에 익숙하기 때문에 비닐봉투를 금지해서는 안 돼.
+                          그것들은 정말 편리해!! 난 과학자들이 비닐봉지를 친환경적으로 만들기 위한 해결책을 찾고 있다고 확신해.</td>
+                      </tr>
+                      <tr style="color:#1565C0;">
+                        <td class = "uppertable" ><b>B :</b></td>
+                        <td class = "lowertable" style = "word-break: keep-all" >비닐 봉투는 지구상의 모든 생명체들의 게 매우 해로워.
+                          그들은 우리의 물과 땅을 오염시키고, 기후변화에 기여하지.
+                          우리는 비닐봉투를 금지해야 하고 즉시 대안을 사용해야 해.</td>
+                      </tr>
+
+                    
+                      </table>
+
+      
+
+      </div>
+
+     <div class = "line-opinion1">
+      </div>
+      <h3 class = "border-opinion1 white--text">Questions</h3>
+      <div style="padding : 16px;">
+
+        <ol style="margin: 12px;">
+          <li>Why do you think plastic bags should be banned?</li>
+          <li>How has plastic bags and other plastic-made products improved our lives?</li>
+          <li>Do you think it's possible for us not to use any plastic materials in the future? Why or why not?</li>
+        </ol>
+
+    
+      </div>
+    </div>
+
+
+  </v-layout>
+</v-container>
+</div>
+
+
+
+</template>
+
+
+
+<script>
+export default {
+
+  props: ['fontSize'],
+
+  data(){
+
+    return{
+      showTitle:false
+
+
+    }
+
+  },
+
+mounted(){
+  this.showTitle=true
+},
+
+  beforeMount(){
+
+
+
+  },
+
+  methods:{
+
+
+  },
+
+  watch:{
+
+    fontSize(current, old){
+
+      console.log(current, 'current')
+      console.log(old, 'previous')
+
+
+    }
+  }
+}
+</script>
+
+<style scoped lang="css">
+
+p{
+
+  margin-top: 10px;
+}
+
+h3{
+  padding-top: 7px;
+
+}
+
+
+body{
+
+  font-size: 16px;
+}
+
+</style>

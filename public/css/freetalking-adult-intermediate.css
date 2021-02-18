@@ -1,0 +1,31 @@
+.upper-header-FAI1 {
+
+    background-color: rgba(13, 13, 13, 0.7);
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.top-border-FAI1 {
+
+    background-color: #c38b8b;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+}
+
+.border-FAI1 {
+
+    padding-top: 7px;
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    background-color: #c38b8b;
+
+}
