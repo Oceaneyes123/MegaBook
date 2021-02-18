@@ -48,8 +48,8 @@
                 <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG3/unit1">1012-1106</a><br>
                 <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG4/unit1">1109-1204</a><br>
                 <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG5/unit1">1207-0108</a><br>
-                 <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit1">0125-0219</a>
-                 <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit1">0222-0319</a>
+                <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit1">0125-0219</a>
+                <a href ="/book#/FreeTalking-Opinion-LG/FreeTalking-Opinion-LG6/unit1">0222-0319</a>
             </div>
         </div>
     </div>
